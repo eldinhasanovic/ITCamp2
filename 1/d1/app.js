@@ -34,5 +34,6 @@ const kurs2 = new Kurs("ITCamp", 9, 350);
 console.log(kurs1.mesec());
 console.log(kurs2.opis());
 const kurs3 = new PracticalCourse("Prakticni kurs", 1, 100, 12);
-kurs3.dolari;
+const kurs4 = new TheoreticalCourse("Teorijski kurs", 4, 200);
 console.log(kurs3);
+console.log(kurs4.publish());
