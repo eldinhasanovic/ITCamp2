@@ -1,10 +1,10 @@
 // console.dir(document);
 
-console.log(document.domain);
-console.log(document.URL);
-console.log(document.title);
+// console.log(document.domain);
+// console.log(document.URL);
+// console.log(document.title);
 
-document.title = "New Title";
+// document.title = "New Title";
 // console.log(document.title);
 
 // console.log(document.body);
@@ -40,7 +40,7 @@ document.title = "New Title";
 
 // GET ELEMENTS BY TAG NAME
 
-const listItems = document.getElementsByTagName("li");
+// const listItems = document.getElementsByTagName("li");
 // console.log(listItems);
 
 // listItems.style.color = "blue"; ne radi na taj nacin, vec mora kroz iteraciju
@@ -55,9 +55,9 @@ const listItems = document.getElementsByTagName("li");
 
 // QUERY SELECTOR
 
-const firstLogoId = document.querySelector("#logo");
-const firstCont = document.querySelector(".container");
-const firstLi = document.querySelector("li");
+// const firstLogoId = document.querySelector("#logo");
+// const firstCont = document.querySelector(".container");
+// const firstLi = document.querySelector("li");
 
 // console.log(firstLogoId);
 // console.log(firstCont);
@@ -68,13 +68,13 @@ const firstLi = document.querySelector("li");
 // const input = document.querySelector("input");
 // input.value = "Hello World";
 
-const input2 = document.querySelector("input[type='email']");
+// const input2 = document.querySelector("input[type='email']");
 // input2.value = "test@test.com";
 // input2.placeholder = "Unesite vasu email adresu";
 
 // QUERY SELECTOR ALL
 
-const listItems2 = document.querySelectorAll("li");
+// const listItems2 = document.querySelectorAll("li");
 // console.log(listItems2);
 
 // const evenLi = document.querySelectorAll("li:nth-child(even)");
@@ -92,8 +92,8 @@ const listItems2 = document.querySelectorAll("li");
 
 // parentElement
 
-const title = document.getElementById("add");
-console.log(title.parentElement);
+// const title = document.getElementById("add");
+// console.log(title.parentElement);
 
 // childNodes   (vraca sve elemente i razmake)
 
@@ -107,8 +107,8 @@ console.log(title.parentElement);
 
 // firstElementChild
 
-const container = document.querySelector(".container");
-console.log(container.firstElementChild);
+// const container = document.querySelector(".container");
+// console.log(container.firstElementChild);
 
 // lastElementChild
 // nextElementSibling
@@ -116,37 +116,136 @@ console.log(container.firstElementChild);
 
 // createElement
 
-const newDiv = document.createElement("div");
+// const newDiv = document.createElement("div");
 
 // add class
 
-newDiv.className = "newDiv";
+// newDiv.className = "newDiv";
 
 // add id
 
-newDiv.id = "newId";
+// newDiv.id = "newId";
 
-const textForNewDiv = (document.createTextNode = "Hello World");
+// const textForNewDiv = (document.createTextNode = "Hello World");
 
-newDiv.append(textForNewDiv);
+// newDiv.append(textForNewDiv);
 
-container.appendChild(newDiv);
+// container.appendChild(newDiv);
 
-input2.setAttribute("placeholder", "Unesite vasu email adresu");
+// input2.setAttribute("placeholder", "Unesite vasu email adresu");
+// console.log(input2.getAttribute("placeholder"));
 
-let button = document.querySelector("button");
-button.addEventListener("click", klik);
-function klik(event) {
-  //   console.log(event);
-  if (button.style.backgroundColor == "red") {
-    button.style.backgroundColor = "";
-  } else {
-    button.style.backgroundColor = "red";
+// NASTAVAK
+
+// EVENTS
+
+// let button = document.querySelector("button");
+
+// button.addEventListener("click", buttonClicked);
+
+// function buttonClicked(event) {
+//   console.log(event);
+//   console.log(event.target.className);
+//   console.log(event.target.classList);
+
+//   console.log(event.clientX);
+//   console.log(event.clientY);
+
+//   console.log(event.altKey);
+//   console.log(event.ctrlKey);
+//   console.log(event.shiftKey);
+
+//   document.querySelector("button").style.backgroundColor = "red";
+//   document.querySelector("button").style.color = "white";
+// }
+
+// newDiv.addEventListener("dblclick", runEvent);
+
+// newDiv.addEventListener("mousedown", runEvent);
+// newDiv.addEventListener("mouseup", runEvent);
+
+// newDiv.addEventListener("mouseenter", runEvent);
+// newDiv.addEventListener("mouseleave", runEvent);
+// newDiv.addEventListener("mousemove", runEvent);
+
+// Za input polja
+// newDiv.addEventListener("keydown", runEvent);
+// newDiv.addEventListener("keyup", runEvent);
+// newDiv.addEventListener("keypress", runEvent);
+
+// function runEvent(event) {
+//   console.log("Type of event:" + event.type);
+// }
+
+// let inputs = document.querySelectorAll("input");
+// let input = inputs[1];
+// console.log(input);
+
+// input.addEventListener("keypress", getValue);
+// input.addEventListener("input", getValue);
+// input.addEventListener("submit", getValue);
+
+// function getValue(e) {
+//   let itemValue = e.target.value;
+//   console.log(itemValue);
+// }
+
+// let form = document.querySelector("form");
+// form.addEventListener("submit", getValues);
+
+// function getValues(e) {
+//   e.preventDefault();
+//   let inputs = document.querySelectorAll("input");
+//   let itemName = inputs[1].value;
+//   let email = inputs[2].value;
+//   console.log(itemName);
+//   console.log(email);
+
+//   inputs[1].value = "";
+//   inputs[2].value = "";
+// }
+
+// let deleteButton = document.createElement("button");
+// const textDeleteButton = (document.createTextNode = "X");
+// deleteButton.className = "deletebtn";
+// deleteButton.style.cursor = "pointer";
+// deleteButton.append(textDeleteButton);
+
+// let lis = document.querySelectorAll("li");
+// let li = lis[lis.length - 1];
+// li.style.display = "flex";
+// li.style.justifyContent = "space-between";
+// li.appendChild(deleteButton);
+// console.log(deleteButton);
+
+let button = document.getElementsByClassName("button")[0];
+let container = document.getElementById("toDoContainer");
+let input = document.getElementById("input");
+
+button.addEventListener("click", function () {
+  let text = document.createElement("li");
+  text.textContent = input.value;
+  input.value = "";
+  text.className = "lista";
+  let deleteButton = document.createElement("button");
+  deleteButton.className = "deletebtn";
+  deleteButton.innerHTML = '<i class="fas fa-trash"></i>';
+  text.appendChild(deleteButton);
+  container.appendChild(text);
+  deleteButton.addEventListener("click", brisi);
+  function brisi() {
+    deleteButton.parentElement.remove();
   }
-}
-inputs = document.querySelectorAll("input");
-input = inputs[1];
-input.addEventListener("keypress", getValue);
-function getValue(e) {
-  console.log(e.target.value);
-}
+  text.addEventListener("dblclick", zavrseno);
+  let arrZavrseni;
+  function zavrseno() {
+    arrZavrseni = deleteButton.parentElement;
+    deleteButton.parentElement.style.textDecoration = "line-through";
+    return arrZavrseni;
+  }
+});
+let form = document.querySelector("form");
+
+form.addEventListener("submit", function (event) {
+  event.preventDefault();
+});
