@@ -1,0 +1,49 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,500;1,600&display=swap");
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  color: white;
+  font-family: "Raleway", sans-serif;
+}
+.container {
+  height: 100vh;
+  width: 100%;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.igrica {
+  position: absolute;
+  height: 60vh;
+  background-color: grey;
+  width: 50%;
+}
+.unos {
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+button {
+  color: green;
+  width: 10vh;
+  height: 3vh;
+}
+#input1 {
+  height: 40px;
+  font-size: 20px;
+  width: 20vh;
+  color: black;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+.ponovo {
+  display: none;
+}
