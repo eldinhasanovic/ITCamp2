@@ -9,6 +9,7 @@ console.log(rndm);
 
 function submit() {
   br = broj.value;
+  broj.value = "";
   if (br > 20) {
     pogodak.innerHTML = "uneti broj je veci od 20";
   } else if (br < 0) {
@@ -38,6 +39,7 @@ function playagain() {
   console.log(rndm);
   play.style.display = "none";
   score.innerHTML = 20;
+  pogodak.innerHTML = "prvo unesite broj";
 }
 // broj.addEventListener("keypress", function (event) {
 //   if (event.key === "Enter") {
